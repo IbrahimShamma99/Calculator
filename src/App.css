@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: ifr;
+  align-items: center;
+  justify-items: center; /* adjusted */
+}
+
+.btn-register {
+  margin-top: 5px;
+  margin-left: 50px;
+  outline: invert;
+  border-radius: 5px;
+  width: 140px;
+  height: 36px;
+  background-color: rgb(20, 20, 20);
+  color: beige;
+}
+
+.btn-login {
+  margin-top: 5px;
+  margin-left: 30px;
+  outline: invert;
+  border-radius: 5px;
+  width: 140px;
+  height: 36px;
+  background-color: rgb(180, 55, 55);
+  color: beige;
+}
+
+.btn-login:hover {
+  border: 2px solid #e93333;
+  background: 0 0;
+  color: #fff;
+}
+
+
+
+.btn-register:hover {
+  border: 2px solid #e93333;
+  background: 0 0;
+  color: #fff;
+}
