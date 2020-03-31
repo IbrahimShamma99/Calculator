@@ -50,6 +50,7 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 5px;
+  width: 100px;
 }
 
 
@@ -80,8 +81,6 @@
   background: 0 0;
   color: #fff;
 }
-
-
 
 .btn-add:hover {
   border: 2px solid #e93333;
