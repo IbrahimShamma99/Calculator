@@ -45,8 +45,15 @@
   align-items: center;
   justify-items: center; /* adjusted */
 }
+.container button {
+  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 5px;
+}
 
-.btn-register {
+
+.btn-add {
   margin-top: 5px;
   margin-left: 50px;
   outline: invert;
@@ -57,7 +64,7 @@
   color: beige;
 }
 
-.btn-login {
+.btn-remove {
   margin-top: 5px;
   margin-left: 30px;
   outline: invert;
@@ -68,7 +75,7 @@
   color: beige;
 }
 
-.btn-login:hover {
+.btn-remove:hover {
   border: 2px solid #e93333;
   background: 0 0;
   color: #fff;
@@ -76,7 +83,7 @@
 
 
 
-.btn-register:hover {
+.btn-add:hover {
   border: 2px solid #e93333;
   background: 0 0;
   color: #fff;
