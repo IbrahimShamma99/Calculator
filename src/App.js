@@ -5,9 +5,8 @@ import Claculator from './Calculator';
 
 class App extends React.Component{
   state={
-    total:0,
-    temp:0,
-    display:""
+    display:"0",
+    equation:""
   }
 
   onSumHandler = (value) => {
@@ -18,12 +17,8 @@ class App extends React.Component{
     this.setState({total:this.state.total-value})
   }
 
-  onTempHandler = (value) => {
-    this.setState({temp:value})
-  }
-
-  onDisplayHandler = (val) => {
-    
+  bindEventhandler = (e) =>{
+    this.setState({display:this.state.display + e.target.value})
   }
 
   render () {
@@ -31,10 +26,9 @@ class App extends React.Component{
       <div className="App">
         <header className="App-header">
           <Claculator total={this.state.total}
-            temp={this.state.temp}
-            setTemp={this.onTempHandler}
-            add={this.onSumHandler}
-            remove={this.onRemoveHandler}
+          display={this.state.display}
+          equation={this.state.equation}
+          bind = {this.bindEventhandler}
           />
         </header>
       </div>
