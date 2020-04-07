@@ -26,7 +26,7 @@ const calc = (props) =>(
     <div className="row">
     <button type="button" onClick={(e)=>{props.bind(e)}} value="+" varient="add" className="btn btn-success">+</button>
     <button type="button" onClick={(e)=>{props.bind(e)}} value="-" className="btn btn-danger">-</button>
-    <button type="button" onClick={()=>{}} className="btn btn-primary">=</button>
+    <button type="button" onClick={()=>{props.equal()}} className="btn btn-primary">=</button>
     </div>
 
     </div>
