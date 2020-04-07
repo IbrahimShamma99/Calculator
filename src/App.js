@@ -16,37 +16,9 @@ class App extends React.Component{
   onEqualhandler = () => {
     const length = this.state.display.length;
     const display = this.state.display;
-    var queue = '';
-    var total = 0;
-    for (var i =0;i<length;i++)
-    { 
-      if (i===0)
-      {
-        queue = display[0];
-        continue;
-      }
-      if (Number.isInteger(parseInt(display[i])))
-      {
-        queue = queue + display[i];
-      }
-      if (display[i] === '+')
-      {
-        total = total + parseInt(queue);
-        queue=""
-        continue;
-      }
-      if(display[i] === '-')
-      {
-        total = total - parseInt(queue);
-        queue=""
-        continue;
-      }
-      if (i === (length-1))
-      {
-        total = total + parseInt(queue);
-      }
-    };
-    this.setState({display:total});
+    const queue = display.split('+').join(',').split('-').join(",").split(',');
+    console.log(queue);
+
   }
 
   render () {
