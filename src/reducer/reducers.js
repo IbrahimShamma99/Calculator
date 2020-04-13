@@ -11,12 +11,15 @@ const reducer = (state=initialState , action)=>{
                 ...state,
                 
             };
-        case(actionTypes.BIND_VALUE):
+        case(actionTypes.EQUAL_VALUE):
             return {
                 ...state,
             }
+        default:
+            return {
+                ...state
+            }
     }
 }
-
 
 export default reducer;

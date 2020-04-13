@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Claculator from './Calculator';
 import {connect} from 'react-redux';
+import * as actionTypes from './reducer/actions';
 
 class App extends React.Component{
   state={
@@ -66,9 +67,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch =>{
   return {
-    binding:dispatch,
-    equalize:dispatch
+    binding:(Value)=>dispatch({type:actionTypes.BIND_VALUE}),
+    equalize:(Value)=>dispatch({type:actionTypes.EQUAL_VALUE})
   }
 }
 
-export default App;
+export default connect(mapStateToProps,mapDispatchToProps)(App);
