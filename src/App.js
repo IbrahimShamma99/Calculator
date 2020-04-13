@@ -5,8 +5,7 @@ import Claculator from './Calculator';
 
 class App extends React.Component{
   state={
-    display:"",
-    equation:""
+    display:""
   }
 
   bindEventhandler = (e) =>{
@@ -49,7 +48,6 @@ class App extends React.Component{
         <header className="App-header">
           <Claculator total={this.state.total}
           display={this.state.display}
-          equation={this.state.equation}
           bind = {this.bindEventhandler}
           equal = {this.onEqualhandler}
           />
