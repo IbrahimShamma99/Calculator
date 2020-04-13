@@ -1,19 +1,19 @@
 import * as actionTypes from './actions';
+import handleDisplayEqualize from './utils';
 
 const initialState = {
     display:""
 };
 
 const reducer = (state=initialState , action)=>{
-    switch(actionTypes){
+    switch(action.type){
         case(actionTypes.BIND_VALUE):
             return {
-                ...state,
-                
+                display:state.display + action.NumberValue
             };
         case(actionTypes.EQUAL_VALUE):
             return {
-                ...state,
+                display:handleDisplayEqualize(state.display)
             }
         default:
             return {

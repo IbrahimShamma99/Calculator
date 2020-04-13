@@ -48,10 +48,10 @@ class App extends React.Component{
     return (
       <div className="App">
         <header className="App-header">
-          <Claculator total={this.state.total}
-          display={this.state.display}
-          bind = {this.bindEventhandler}
-          equal = {this.onEqualhandler}
+          <Claculator 
+          display={this.props.dis}
+          bind = {this.props.binding}
+          equal = {this.props.equalize}
           />
         </header>
       </div>
@@ -67,8 +67,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch =>{
   return {
-    binding:(Value)=>dispatch({type:actionTypes.BIND_VALUE}),
-    equalize:(Value)=>dispatch({type:actionTypes.EQUAL_VALUE})
+    //IT dispatches an action
+    binding:(Value)=>dispatch({type:actionTypes.BIND_VALUE,NumberValue:Value}),
+    equalize:()=>dispatch({type:actionTypes.EQUAL_VALUE})
   }
 }
 
