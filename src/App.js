@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Claculator from './Calculator';
+import {connect} from 'react-redux';
 
 class App extends React.Component{
   state={
@@ -55,7 +56,19 @@ class App extends React.Component{
       </div>
     );
 }
+}
 
+const mapStateToProps = state => {
+  return {
+    dis:state.display
+  }
+} 
+
+const mapDispatchToProps = dispatch =>{
+  return {
+    binding:dispatch,
+    equalize:dispatch
+  }
 }
 
 export default App;

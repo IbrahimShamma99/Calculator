@@ -1,18 +1,21 @@
 import * as actionTypes from './actions';
 
 const initialState = {
-    display:"",
-    equation:""
+    display:""
 };
 
 const reducer = (state=initialState , action)=>{
-    // switch(actionTypes){
-    //     case(actionTypes.ADD_VALUE):
-    //         return {
-    //             ...state,
-
-    //         }
-    // }
+    switch(actionTypes){
+        case(actionTypes.BIND_VALUE):
+            return {
+                ...state,
+                
+            };
+        case(actionTypes.BIND_VALUE):
+            return {
+                ...state,
+            }
+    }
 }
 
 

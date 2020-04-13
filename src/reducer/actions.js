@@ -1,2 +1,2 @@
-export const ADD_VALUE = "ADD_VALUE";
-export const SUB_VALUE = "SUB_VALUE";
+export const BIND_VALUE = "BIND_VALUE";
+export const EQUAL_VALUE = "EQUAL_VALUE";
